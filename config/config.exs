@@ -7,6 +7,9 @@
 # General application configuration
 import Config
 
+config :uauth,
+  ecto_repos: [Users.Repo]
+
 # Configures the endpoint
 config :uauth, UauthWeb.Endpoint,
   url: [host: "localhost"],

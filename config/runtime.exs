@@ -16,8 +16,6 @@ if Config.config_env() == :dev do
   DotenvParser.load_file(".env")
 end
 
-config :uauth,
-  ecto_repos: [Users.Repo]
 
 config :uauth, Users.Repo,
   username: System.fetch_env!("DATABASE_USERNAME"),
